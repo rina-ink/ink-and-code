@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import StarTrail from "@/components/StarTrail";
+import CheckerTransition from "@/components/CheckerTransition";
 
 export default function Home() {
   return (
@@ -87,10 +88,18 @@ export default function Home() {
           <span className="falling-grain falling-grain-3">✦</span>
           <span className="falling-grain falling-grain-4">·</span>
 
-          <span className="falling-grain falling-grain-5 bridge-grain">·</span>
-          <span className="falling-grain falling-grain-6 bridge-grain">✧</span>
-          <span className="falling-grain falling-grain-7 bridge-grain">·</span>
-          <span className="falling-grain falling-grain-8 bridge-grain">·</span>
+          <span className="falling-grain falling-grain-5 bridge-grain">
+            ·
+          </span>
+          <span className="falling-grain falling-grain-6 bridge-grain">
+            ✧
+          </span>
+          <span className="falling-grain falling-grain-7 bridge-grain">
+            ·
+          </span>
+          <span className="falling-grain falling-grain-8 bridge-grain">
+            ·
+          </span>
         </div>
 
         {/* ==================================================
@@ -109,9 +118,7 @@ export default function Home() {
               and interactive things
             </p>
 
-            <span className="playground-hint">
-              follow the stars →
-            </span>
+            <span className="playground-hint">follow the stars →</span>
           </div>
 
           <div className="galaxy" aria-hidden="true">
@@ -141,6 +148,30 @@ export default function Home() {
           </div>
 
           <StarTrail />
+        </section>
+
+        {/* ==================================================
+            CHECKER TRANSITION
+            ================================================== */}
+
+        <CheckerTransition />
+
+        {/* ==================================================
+            WORK
+            ================================================== */}
+
+        <section id="work" className="work">
+          <div className="work-intro">
+            <span className="section-number">03</span>
+
+            <h2>work</h2>
+
+            <p>
+              things I&apos;ve built,
+              <br />
+              and things I&apos;m still building.
+            </p>
+          </div>
         </section>
       </div>
     </main>
