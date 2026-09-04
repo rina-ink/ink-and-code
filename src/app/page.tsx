@@ -172,6 +172,119 @@ export default function Home() {
               and things I&apos;m still building.
             </p>
           </div>
+
+          <article className="project project-inner-flow">
+            <div className="project-visual">
+              <div className="inner-flow-mark" aria-hidden="true">
+                <span className="flow-line flow-line-1" />
+                <span className="flow-line flow-line-2" />
+                <span className="flow-line flow-line-3" />
+              </div>
+            </div>
+
+            <div className="project-copy">
+              <span className="project-number">01 / selected work</span>
+
+              <h3>inner flow</h3>
+
+              <p className="project-description">
+                a quiet space for
+                <br />
+                movement, rest and touch.
+              </p>
+
+              <p className="project-tech">
+                React · TypeScript · Node
+                <br />
+                Express · MongoDB
+              </p>
+              <a
+                href="https://inner-flow-frontend.onrender.com/"
+                className="project-link"
+                target="_blank"
+                rel="noreferrer"
+              >
+                view project ↗
+              </a>
+            </div>
+          </article>
+
+          {/* ==================================================
+              PROJECT 02 — GUITAR STORE
+              ================================================== */}
+
+          <article className="project project-guitar-store">
+            <div className="project-copy">
+              <span className="project-number">02 / selected work</span>
+
+              <h3>guitar store api</h3>
+
+              <p className="project-description">
+                a backend for products,
+                <br />
+                orders and inventory.
+              </p>
+
+              <p className="project-tech">
+                Node · Express · TypeScript
+                <br />
+                MongoDB · Mongoose · Zod
+              </p>
+
+              <a
+                href="https://github.com/rina-ink/guitar-store"
+                className="project-link"
+                target="_blank"
+                rel="noreferrer"
+              >
+                view project ↗
+              </a>
+            </div>
+
+            <div className="project-visual project-visual-guitar">
+              <Image
+                src="/illustrations/guitar-store-bass.png"
+                alt="Hand-drawn bass guitar study"
+                width={900}
+                height={1200}
+                className="guitar-store-image"
+              />
+            </div>
+          </article>
+
+          {/* ==================================================
+              PROJECT 03 — EVENTBEAT
+              ================================================== */}
+          {/*
+          <article className="project project-eventbeat">
+            <div className="project-copy">
+              <span className="project-number">03 / selected work</span>
+              
+              <h3>eventBeat</h3>
+
+              <p className="project-description">
+                a React app for discovering,
+                <br />
+                creating and managing events.
+              </p>
+
+              <p className="project-tech">
+                React · TypeScript · React Router
+                <br />
+                Node · Express · MongoDB
+              </p>
+
+              <a
+                href="https://github.com/rina-ink/eventBeat"
+                className="project-link"
+                target="_blank"
+                rel="noreferrer"
+              >
+                view project ↗
+              </a>
+            </div>
+          </article>
+          */}
         </section>
       </div>
     </main>
