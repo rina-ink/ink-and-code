@@ -787,7 +787,7 @@ a {
 }
 
 /* ==================================================
-    MOBILE
+    MOBILE — HERO / OBSERVE / PLAYGROUND
    ================================================== */
 
 @media (max-width: 700px) {
@@ -821,7 +821,7 @@ a {
   }
 
   .hero-squirrel {
-    right: -2rem;
+    right: -1.9rem;
     bottom: 4rem;
 
     width: 245px;
@@ -837,12 +837,12 @@ a {
   }
 
   .falling-grain {
-  animation-duration: 10.5s;
-}
+    animation-duration: 10.5s;
+  }
 
-.bridge-grain {
-  animation-duration: 11.5s;
-}
+  .bridge-grain {
+    animation-duration: 11.5s;
+  }
 
   .scroll-link {
     left: 1.5rem;
@@ -899,46 +899,7 @@ a {
   .checker-transition {
     height: 44px;
   }
-
-  .work {
-    min-height: 100vh;
-    padding: 5rem 1.5rem 7rem;
-  }
-
-  .work h2 {
-    font-size: 1.15rem;
-  }
-
-  .work p {
-    font-size: 0.78rem;
-  }
 }
-
-
-@media (max-width: 700px) {
-  .project-inner-flow {
-    display: block;
-
-    margin-top: 10rem;
-  }
-
-  .project-visual {
-    min-height: 300px;
-  }
-
-  .inner-flow-mark {
-    inset: 5% 0 5% 0;
-  }
-
-  .project-copy {
-    margin-top: 2.5rem;
-  }
-
-  .project-copy h3 {
-    font-size: 1.15rem;
-  }
-}
-
 
 /* ==================================================
     REDUCED MOTION
@@ -956,7 +917,6 @@ a {
     animation: none;
   }
 }
-
 
 /* ==================================================
     INTERACTIVE STAR TRAIL
@@ -1030,7 +990,6 @@ a {
   }
 }
 
-
 /* ==================================================
     CHECKER TRANSITION
    ================================================== */
@@ -1072,16 +1031,12 @@ a {
   fill: var(--ink);
 }
 
-
 /* ==================================================
-    WORK
+    PAPER SECTIONS
+    work + drawings share one continuous paper surface
    ================================================== */
 
-.work {
-  position: relative;
-  min-height: 110vh;
-  padding: 6rem 8vw 8rem;
-
+.paper-sections {
   background:
     radial-gradient(
       circle at 20% 18%,
@@ -1097,22 +1052,43 @@ a {
   color: var(--ink);
 }
 
+/* ==================================================
+    WORK
+   ================================================== */
+
+.work {
+  position: relative;
+
+  min-height: 110vh;
+
+  padding: 6rem 8vw 8rem;
+
+  color: var(--ink);
+}
+
 .work-intro {
   max-width: 520px;
 }
 
-.work h2 {
+/* work + drawings use the same heading typography */
+
+.work h2,
+.drawings-copy h2 {
   margin: 0.5rem 0 1.25rem;
 
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(1.15rem, 1.55vw, 1.45rem);
 
+  font-size: clamp(1.15rem, 1.55vw, 1.45rem);
   font-weight: 400;
+
   line-height: 1.15;
   letter-spacing: 0.015em;
 }
 
-.work-intro p {
+/* work + drawings use the same body typography */
+
+.work-intro p,
+.drawings-copy p {
   margin: 0;
 
   font-size: 0.82rem;
@@ -1120,7 +1096,6 @@ a {
 
   color: var(--faded-ink);
 }
-
 
 /* ==================================================
     WORK — PROJECTS
@@ -1130,10 +1105,20 @@ a {
   position: relative;
 }
 
+/* ==================================================
+    PROJECT 01 — INNER FLOW
+    visual left / copy right
+   ================================================== */
+
 .project-inner-flow {
   display: grid;
-  grid-template-columns: minmax(0, 1.35fr) minmax(220px, 0.65fr);
+
+  grid-template-columns:
+    minmax(0, 1.35fr)
+    minmax(220px, 0.65fr);
+
   align-items: center;
+
   gap: clamp(3rem, 8vw, 9rem);
 
   max-width: 1100px;
@@ -1169,6 +1154,7 @@ a {
   top: 14%;
 
   width: 52%;
+
   aspect-ratio: 1 / 0.72;
 
   transform: rotate(-9deg);
@@ -1179,6 +1165,7 @@ a {
   top: 30%;
 
   width: 48%;
+
   aspect-ratio: 1 / 0.66;
 
   transform: rotate(13deg);
@@ -1189,12 +1176,13 @@ a {
   top: 48%;
 
   width: 58%;
+
   aspect-ratio: 1 / 0.58;
 
   transform: rotate(-4deg);
 }
 
-/* ---------- project copy ---------- */
+/* ---------- shared project copy ---------- */
 
 .project-copy {
   align-self: center;
@@ -1206,6 +1194,7 @@ a {
   margin-bottom: 1rem;
 
   font-size: 0.62rem;
+
   letter-spacing: 0.045em;
 
   color: var(--faded-ink);
@@ -1215,9 +1204,11 @@ a {
   margin: 0;
 
   font-family: Georgia, "Times New Roman", serif;
+
   font-size: clamp(1.15rem, 1.55vw, 1.45rem);
 
   font-weight: 400;
+
   line-height: 1.2;
 }
 
@@ -1225,20 +1216,21 @@ a {
   margin: 0.9rem 0 0;
 
   font-size: 0.8rem;
+
   line-height: 1.7;
 
   color: var(--ink-soft);
 }
 
 .project-tech {
-  margin:  0.75rem 0 0;
+  margin: 0.75rem 0 0;
 
   font-size: 0.66rem;
+
   line-height: 1.8;
 
   color: var(--faded-ink);
 }
-
 
 .project-link {
   display: inline-block;
@@ -1246,6 +1238,7 @@ a {
   margin-top: 1.4rem;
 
   font-size: 0.66rem;
+
   letter-spacing: 0.02em;
 
   color: var(--ink-soft);
@@ -1259,12 +1252,13 @@ a {
 
 .project-link:hover {
   border-color: var(--ink);
+
   transform: translateX(3px);
 }
 
-
 /* ==================================================
     PROJECT 02 — GUITAR STORE
+    copy left / visual right
    ================================================== */
 
 .project-guitar-store {
@@ -1285,11 +1279,13 @@ a {
 
 .project-guitar-store .project-copy {
   justify-self: start;
+
   max-width: 320px;
 }
 
 .project-visual-guitar {
   display: flex;
+
   justify-content: flex-end;
   align-items: center;
 
@@ -1309,10 +1305,349 @@ a {
   transform: rotate(-0.8deg);
 }
 
+/* ==================================================
+    PROJECT 03 — INSTRUMENT TIMBRE
+    visual left / copy right
+   ================================================== */
+
+.project-timbre {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.35fr)
+    minmax(220px, 0.65fr);
+
+  align-items: center;
+
+  gap: clamp(3rem, 8vw, 9rem);
+
+  max-width: 1100px;
+
+  margin: clamp(15rem, 27vh, 21rem) auto 0;
+}
+
+.project-timbre .project-copy {
+  justify-self: end;
+
+  width: min(320px, 100%);
+}
+
+.project-visual-timbre {
+  display: flex;
+
+  align-items: center;
+  justify-content: flex-start;
+
+  min-height: clamp(320px, 38vw, 520px);
+}
+
+/* ---------- Instrument Timbre notes ---------- */
+
+.timbre-mark {
+  position: relative;
+
+  width: min(68%, 395px);
+  height: 270px;
+}
+
+.music-note {
+  position: absolute;
+
+  display: block;
+
+  width: 34px;
+  height: 62px;
+
+  opacity: 0.58;
+}
+
+.music-note-head {
+  position: absolute;
+
+  left: 1px;
+  bottom: 0;
+
+  width: 13px;
+  height: 9px;
+
+  background: var(--ink);
+
+  border-radius: 50%;
+
+  transform: rotate(-18deg);
+}
+
+.music-note-stem {
+  position: absolute;
+
+  left: 11px;
+  bottom: 5px;
+
+  width: 1px;
+  height: 48px;
+
+  background: var(--ink);
+}
+
+.music-note-flag {
+  position: absolute;
+
+  left: 11px;
+  top: 7px;
+
+  width: 17px;
+  height: 22px;
+
+  border-top: 1px solid var(--ink);
+  border-right: 1px solid var(--ink);
+
+  border-radius: 0 80% 65% 0;
+
+  transform:
+    rotate(12deg)
+    skewY(7deg);
+
+  transform-origin: left top;
+}
+
+.music-note-flag::after {
+  content: "";
+
+  position: absolute;
+
+  right: -1px;
+  bottom: -4px;
+
+  width: 7px;
+  height: 11px;
+
+  border-right: 1px solid var(--ink);
+
+  border-radius: 50%;
+
+  transform: rotate(22deg);
+}
+
+.music-note-1 {
+  left: 48%;
+  top: 8%;
+
+  transform:
+    rotate(2deg)
+    scale(0.92);
+}
+
+.music-note-2 {
+  left: 17%;
+  top: 58%;
+
+  transform:
+    rotate(-7deg)
+    scale(1.02);
+}
+
+.music-note-3 {
+  right: 10%;
+  top: 60%;
+
+  transform:
+    rotate(5deg)
+    scale(0.96);
+}
+
+/* ==================================================
+    DRAWINGS
+    copy left / visual right
+   ================================================== */
+
+.drawings {
+  position: relative;
+
+  padding:
+    clamp(13rem, 24vh, 18rem)
+    8vw
+    clamp(13rem, 24vh, 18rem);
+
+  color: var(--ink);
+}
+
+.drawings-inner {
+  display: grid;
+
+  grid-template-columns:
+    minmax(220px, 0.65fr)
+    minmax(0, 1.35fr);
+
+  align-items: center;
+
+  gap: clamp(3rem, 8vw, 9rem);
+
+  max-width: 1100px;
+
+  margin: 0 auto;
+}
+
+/* ---------- drawings copy ---------- */
+
+.drawings-copy {
+  grid-column: 1;
+  grid-row: 1;
+
+  justify-self: start;
+
+  width: min(280px, 100%);
+}
+
+/* ---------- drawing ---------- */
+
+.drawings-visual {
+  grid-column: 2;
+  grid-row: 1;
+
+  display: flex;
+
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.strudel-drawing {
+  display: block;
+
+  width: min(68%, 395px);
+  height: auto;
+
+  object-fit: contain;
+
+  border-radius: 18px;
+
+  transform: none;
+}
+
+/* ==================================================
+    WORK + DRAWINGS — MOBILE
+   ================================================== */
 
 @media (max-width: 700px) {
+  .work {
+    min-height: 100vh;
+
+    padding: 5rem 1.5rem 7rem;
+  }
+
+  .work h2,
+  .drawings-copy h2 {
+    font-size: 1.15rem;
+  }
+
+  .work-intro p,
+  .drawings-copy p {
+    font-size: 0.78rem;
+  }
+
+/* ---------- Inner Flow ---------- */
+
+.project-inner-flow {
+  display: grid;
+
+  grid-template-columns:
+    110px
+    minmax(0, 1fr);
+
+  align-items: center;
+
+  gap: 2rem;
+
+  margin-top: 10.5rem;
+}
+
+
+/* visual on the left */
+
+.project-inner-flow .project-visual {
+  min-height: 190px;
+
+  grid-column: 1;
+  grid-row: 1;
+}
+
+
+/* three small vertical ellipses */
+
+.project-inner-flow .inner-flow-mark {
+  position: relative;
+
+  inset: auto;
+
+  width: 100%;
+  height: 190px;
+}
+
+.project-inner-flow .flow-line {
+  width: 35px;
+
+  aspect-ratio: 1 / 0.62;
+}
+
+
+/* upper ellipse */
+
+.project-inner-flow .flow-line-1 {
+  left: 12px;
+  top: 15px;
+
+  transform: rotate(-4deg);
+}
+
+
+/* middle ellipse */
+
+.project-inner-flow .flow-line-2 {
+  left: 22px;
+  top: 60px;
+
+  width: 31px;
+
+  transform: rotate(11deg);
+}
+
+
+/* lower ellipse */
+
+.project-inner-flow .flow-line-3 {
+  left: 16px;
+  top: 116px;
+
+  transform: rotate(-2deg);
+}
+
+
+/* project text on the right */
+
+.project-inner-flow .project-copy {
+  grid-column: 2;
+  grid-row: 1;
+
+  align-self: center;
+
+  margin-top: 0;
+
+  width: 100%;
+}
+
+.project-copy h3 {
+  font-size: 1.15rem;
+}
+
+  /* ---------- Guitar Store ---------- */
+
   .project-guitar-store {
     display: block;
+
+    margin-top: 12rem;
+  }
+
+  .project-guitar-store .project-copy {
+    max-width: none;
   }
 
   .project-visual-guitar {
@@ -1331,40 +1666,124 @@ a {
 
     transform: rotate(-0.6deg);
   }
+
+  /* ---------- Instrument Timbre ---------- */
+
+.project-timbre {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.92fr)
+    minmax(145px, 1.08fr);
+
+  align-items: start;
+
+  gap: 0;
+
+  margin-top: 12rem;
+}
+
+.project-timbre .project-copy {
+  grid-column: 1;
+  grid-row: 1;
+
+  width: 100%;
+
+  margin-top: 0;
+
+  z-index: 2;
+}
+
+.project-visual-timbre {
+  grid-column: 2;
+  grid-row: 1;
+
+  width: 100%;
+
+  min-height: 390px;
+
+  margin-top: 0;
+
+  align-self: start;
+}
+
+.timbre-mark {
+  position: relative;
+
+  width: 100%;
+  height: 390px;
+}
+
+/* top note */
+
+.music-note-1 {
+  left: 48%;
+  top: 24%;
+
+  transform:
+    rotate(2deg)
+    scale(0.82);
 }
 
 
-/* ==================================================
-    PROJECT 03 — EVENTBEAT
-   ================================================== */
+/* lower-left note */
 
-.project-eventbeat {
-  max-width: 1100px;
+.music-note-2 {
+  left: 12%;
+  top: 45%;
 
-  margin: clamp(16rem, 30vh, 23rem) auto 0;
-
-  min-height: 520px;
-
-  display: flex;
-  justify-content: flex-end;
-}
-
-.project-eventbeat .project-copy {
-  width: min(320px, 100%);
-
-  margin-left: 0;
-  margin-right: 8%;
+  transform:
+    rotate(-7deg)
+    scale(0.84);
 }
 
 
-@media (max-width: 700px) {
-  .project-eventbeat {
-    min-height: 460px;
-    margin-top: 12rem;
+/* lower-right note */
+
+.music-note-3 {
+  right: 11%;
+  top: 51%;
+
+  transform:
+    rotate(5deg)
+    scale(0.86);
+}
+
+  /* ---------- Drawings ---------- */
+
+  .drawings {
+    padding: 8rem 1.5rem 9rem;
   }
 
-  .project-eventbeat .project-copy {
+  .drawings-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 0;
+  }
+
+  .drawings-copy {
+    order: 1;
+
     width: 100%;
-    margin-left: 0;
+  }
+
+  .drawings-visual {
+    order: 2;
+
+    width: 100%;
+
+    margin-top: 4.5rem;
+
+    justify-content: flex-end;
+  }
+
+  .strudel-drawing {
+    width: min(66vw, 252px);
+
+    border-radius: 14px;
+
+    transform: none;
   }
 }
