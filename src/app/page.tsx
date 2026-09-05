@@ -299,9 +299,9 @@ export default function Home() {
                 <h3>instrument timbre</h3>
 
                 <p className="project-description">
-                  exploring how instruments
+                  exploring how different
                   <br />
-                  sound different.
+                  instruments sound.
                 </p>
 
                 <p className="project-tech">
@@ -347,6 +347,36 @@ export default function Home() {
                   things I make
                   <br />
                   away from the screen.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* ==================================================
+              ABOUT
+              ================================================== */}
+
+          <section id="about" className="about">
+            <div className="about-inner">
+              <span className="section-number">05</span>
+
+              <h2>about</h2>
+
+              <div className="about-copy">
+                <p className="about-thought">
+                  figuring things out,
+                  <br />
+                  following ideas.
+                </p>
+
+                <p className="about-thought">
+                  learning as I go,
+                  <br />
+                  making things along the way.
+                </p>
+
+                <p className="about-location">
+                  based in Berlin.
                 </p>
               </div>
             </div>

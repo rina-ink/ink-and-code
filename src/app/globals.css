@@ -1524,6 +1524,62 @@ a {
 }
 
 /* ==================================================
+    ABOUT
+   ================================================== */
+
+.about {
+  position: relative;
+
+  padding:
+    clamp(10rem, 18vh, 14rem)
+    8vw
+    clamp(11rem, 20vh, 15rem);
+
+  color: var(--ink);
+}
+
+.about-inner {
+  width: 100%;
+  max-width: 1100px;
+
+  margin: 0 auto;
+}
+
+.about h2 {
+  margin: 0.5rem 0 1.25rem;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(1.15rem, 1.55vw, 1.45rem);
+  font-weight: 400;
+
+  line-height: 1.15;
+  letter-spacing: 0.015em;
+}
+
+.about-copy {
+  max-width: 320px;
+}
+
+.about-thought {
+  margin: 0 0 1.5rem;
+
+  font-size: 0.82rem;
+  line-height: 1.75;
+
+  color: var(--faded-ink);
+}
+
+.about-location {
+  margin: 1.8rem 0 0;
+
+  font-size: 0.78rem;
+  line-height: 1.6;
+
+  color: var(--ink);
+}
+
+/* ==================================================
     WORK + DRAWINGS — MOBILE
    ================================================== */
 
@@ -1557,7 +1613,7 @@ a {
 
   gap: 2rem;
 
-  margin-top: 10.5rem;
+  margin-top: 10.3rem;
 }
 
 
@@ -1643,7 +1699,7 @@ a {
   .project-guitar-store {
     display: block;
 
-    margin-top: 12rem;
+    margin-top: 10.3rem;
   }
 
   .project-guitar-store .project-copy {
@@ -1653,7 +1709,7 @@ a {
   .project-visual-guitar {
     min-height: auto;
 
-    margin-top: 3rem;
+    margin-top: 2.8rem;
 
     justify-content: flex-end;
   }
@@ -1680,7 +1736,7 @@ a {
 
   gap: 0;
 
-  margin-top: 12rem;
+  margin-top: 8rem;
 }
 
 .project-timbre .project-copy {
@@ -1752,7 +1808,7 @@ a {
   /* ---------- Drawings ---------- */
 
   .drawings {
-    padding: 8rem 1.5rem 9rem;
+    padding: 2.6rem 1.5rem 3.6rem;
   }
 
   .drawings-inner {
@@ -1774,7 +1830,7 @@ a {
 
     width: 100%;
 
-    margin-top: 4.5rem;
+    margin-top: 2.8rem;
 
     justify-content: flex-end;
   }
@@ -1786,4 +1842,36 @@ a {
 
     transform: none;
   }
+
+/* ---------- About ---------- */
+
+.about {
+  padding:
+    7rem
+    1.5rem
+    9rem;
+}
+
+.about h2 {
+  margin-bottom: 1.25rem;
+  font-size: 1.15rem;
+}
+
+.about-copy {
+  max-width: 290px;
+}
+
+.about-thought {
+  margin-bottom: 1.4rem;
+
+  font-size: 0.78rem;
+}
+
+.about-location {
+  margin-top: 1.8rem;
+
+  font-size: 0.72rem;
+
+  color: var(--ink);
+}
 }
