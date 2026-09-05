@@ -821,7 +821,7 @@ a {
   }
 
   .hero-squirrel {
-    right: -2rem;
+    right: -1.9rem;
     bottom: 4rem;
 
     width: 245px;
@@ -1544,29 +1544,99 @@ a {
     font-size: 0.78rem;
   }
 
-  /* ---------- Inner Flow ---------- */
+/* ---------- Inner Flow ---------- */
 
-  .project-inner-flow {
-    display: block;
+.project-inner-flow {
+  display: grid;
 
-    margin-top: 10rem;
-  }
+  grid-template-columns:
+    110px
+    minmax(0, 1fr);
 
-  .project-visual {
-    min-height: 300px;
-  }
+  align-items: center;
 
-  .inner-flow-mark {
-    inset: 5% 0 5% 0;
-  }
+  gap: 2rem;
 
-  .project-copy {
-    margin-top: 2.5rem;
-  }
+  margin-top: 10.5rem;
+}
 
-  .project-copy h3 {
-    font-size: 1.15rem;
-  }
+
+/* visual on the left */
+
+.project-inner-flow .project-visual {
+  min-height: 190px;
+
+  grid-column: 1;
+  grid-row: 1;
+}
+
+
+/* three small vertical ellipses */
+
+.project-inner-flow .inner-flow-mark {
+  position: relative;
+
+  inset: auto;
+
+  width: 100%;
+  height: 190px;
+}
+
+.project-inner-flow .flow-line {
+  width: 35px;
+
+  aspect-ratio: 1 / 0.62;
+}
+
+
+/* upper ellipse */
+
+.project-inner-flow .flow-line-1 {
+  left: 12px;
+  top: 15px;
+
+  transform: rotate(-4deg);
+}
+
+
+/* middle ellipse */
+
+.project-inner-flow .flow-line-2 {
+  left: 22px;
+  top: 60px;
+
+  width: 31px;
+
+  transform: rotate(11deg);
+}
+
+
+/* lower ellipse */
+
+.project-inner-flow .flow-line-3 {
+  left: 16px;
+  top: 116px;
+
+  transform: rotate(-2deg);
+}
+
+
+/* project text on the right */
+
+.project-inner-flow .project-copy {
+  grid-column: 2;
+  grid-row: 1;
+
+  align-self: center;
+
+  margin-top: 0;
+
+  width: 100%;
+}
+
+.project-copy h3 {
+  font-size: 1.15rem;
+}
 
   /* ---------- Guitar Store ---------- */
 
@@ -1599,53 +1669,85 @@ a {
 
   /* ---------- Instrument Timbre ---------- */
 
-  .project-timbre {
-    display: flex;
-    flex-direction: column;
+.project-timbre {
+  display: grid;
 
-    margin-top: 12rem;
-  }
+  grid-template-columns:
+    minmax(0, 0.92fr)
+    minmax(145px, 1.08fr);
 
-  .project-timbre .project-copy {
-    order: 1;
+  align-items: start;
 
-    width: 100%;
+  gap: 0;
 
-    margin-top: 0;
-  }
+  margin-top: 12rem;
+}
 
-  .project-visual-timbre {
-    order: 2;
+.project-timbre .project-copy {
+  grid-column: 1;
+  grid-row: 1;
 
-    width: 100%;
+  width: 100%;
 
-    min-height: 250px;
+  margin-top: 0;
 
-    margin-top: 3rem;
+  z-index: 2;
+}
 
-    justify-content: flex-start;
-  }
+.project-visual-timbre {
+  grid-column: 2;
+  grid-row: 1;
 
-  .timbre-mark {
-    width: 100%;
+  width: 100%;
 
-    height: 225px;
-  }
+  min-height: 390px;
 
-  .music-note-1 {
-    left: 52%;
-    top: 8%;
-  }
+  margin-top: 0;
 
-  .music-note-2 {
-    left: 16%;
-    top: 58%;
-  }
+  align-self: start;
+}
 
-  .music-note-3 {
-    right: 10%;
-    top: 61%;
-  }
+.timbre-mark {
+  position: relative;
+
+  width: 100%;
+  height: 390px;
+}
+
+/* top note */
+
+.music-note-1 {
+  left: 48%;
+  top: 24%;
+
+  transform:
+    rotate(2deg)
+    scale(0.82);
+}
+
+
+/* lower-left note */
+
+.music-note-2 {
+  left: 12%;
+  top: 45%;
+
+  transform:
+    rotate(-7deg)
+    scale(0.84);
+}
+
+
+/* lower-right note */
+
+.music-note-3 {
+  right: 11%;
+  top: 51%;
+
+  transform:
+    rotate(5deg)
+    scale(0.86);
+}
 
   /* ---------- Drawings ---------- */
 
