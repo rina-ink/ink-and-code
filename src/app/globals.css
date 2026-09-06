@@ -1539,10 +1539,31 @@ a {
 }
 
 .about-inner {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.35fr)
+    minmax(220px, 0.65fr);
+
+  align-items: center;
+
+  gap: clamp(3rem, 8vw, 9rem);
+
   width: 100%;
   max-width: 1100px;
 
   margin: 0 auto;
+}
+
+/* ---------- About copy - RIGHT ---------- */
+
+.about-copy-block {
+  grid-column: 2;
+  grid-row: 1;
+
+  justify-self: end;
+
+  width: min(320px, 100%);
 }
 
 .about h2 {
@@ -1580,7 +1601,266 @@ a {
 }
 
 /* ==================================================
-    WORK + DRAWINGS — MOBILE
+    ABOUT - BERLIN VISUAL
+   ================================================== */
+
+.about-visual {
+  grid-column: 1;
+  grid-row: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.berlin-tower-image {
+  display: block;
+
+  width: min(72%, 330px);
+  height: auto;
+
+  object-fit: contain;
+
+  opacity: 0.58;
+}
+
+/* ==================================================
+    CONTACT
+   ================================================== */
+
+.contact {
+  position: relative;
+
+  padding:
+    clamp(10rem, 18vh, 14rem)
+    8vw
+    clamp(7rem, 13vh, 10rem);
+
+  color: var(--ink);
+}
+
+.contact-inner {
+  display: grid;
+
+  grid-template-columns:
+    minmax(220px, 0.65fr)
+    minmax(0, 1.35fr);
+
+  align-items: center;
+
+  gap: clamp(3rem, 8vw, 9rem);
+
+  width: 100%;
+  max-width: 1100px;
+
+  margin: 0 auto;
+}
+
+
+/* ---------- coffee visual - RIGHT ---------- */
+
+.coffee-visual {
+  position: relative;
+
+  grid-column: 2;
+  grid-row: 1;
+
+  justify-self: end;
+
+  width: min(68%, 395px);
+
+  opacity: 0.96;
+}
+
+.coffee-doily-image {
+  display: block;
+
+  width: 95%;
+  height: auto;
+
+  object-fit: contain;
+}
+
+
+/* ---------- copy — LEFT ---------- */
+
+.contact-copy {
+  grid-column: 1;
+  grid-row: 1;
+
+  justify-self: start;
+
+  width: min(300px, 100%);
+}
+
+.contact h2 {
+  margin: 0.5rem 0 1.25rem;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(1.15rem, 1.55vw, 1.45rem);
+  font-weight: 400;
+
+  line-height: 1.15;
+  letter-spacing: 0.015em;
+}
+
+.contact-title {
+  margin: 0;
+
+  font-size: 0.82rem;
+  line-height: 1.7;
+
+  color: var(--ink);
+}
+
+.contact-text {
+  margin: 1.5rem 0 0;
+
+  font-size: 0.82rem;
+  line-height: 1.7;
+
+  color: var(--faded-ink);
+}
+
+.contact-message {
+  display: inline-block;
+
+  margin-top: 2rem;
+
+  font-size: 0.66rem;
+  letter-spacing: 0.02em;
+
+  color: var(--ink-soft);
+
+  border-bottom: 1px solid rgba(25, 23, 19, 0.35);
+
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease;
+}
+
+.contact-message:hover {
+  transform: translateX(3px);
+
+  border-color: var(--ink);
+}
+
+
+/* ==================================================
+    CONTACT — STEAM
+   ================================================== */
+
+.coffee-steam {
+  position: absolute;
+
+  left: 51%;
+  bottom: 64%;
+
+  width: 105px;
+  height: 155px;
+
+  transform: translateX(-50%);
+
+  overflow: visible;
+  pointer-events: none;
+}
+
+.steam-line {
+  fill: none;
+
+  stroke: rgba(255, 248, 225, 0.8);
+  stroke-width: 3;
+  stroke-linecap: round;
+
+  opacity: 0;
+
+  animation: steam-drift 5.5s ease-in-out infinite;
+}
+
+.steam-line-2 {
+  animation-delay: 1.4s;
+  animation-duration: 6.2s;
+}
+
+.steam-line-3 {
+  animation-delay: 2.7s;
+  animation-duration: 5.8s;
+}
+
+@keyframes steam-drift {
+  0% {
+    transform: translateY(6px);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 0.55;
+  }
+
+  65% {
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: translateY(-8px);
+    opacity: 0;
+  }
+}
+
+/* ==================================================
+    FOOTER
+   ================================================== */
+
+.site-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  min-height: 72px;
+
+  padding: 0 8vw;
+
+  background: #191a18;
+  color: rgba(239, 229, 207, 0.58);
+
+  font-size: 0.62rem;
+  letter-spacing: 0.025em;
+}
+
+.footer-mark {
+  white-space: nowrap;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+
+  gap: 1.5rem;
+}
+
+.footer-links a {
+  transition:
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.footer-links a:hover {
+  color: rgba(239, 229, 207, 0.95);
+  transform: translateY(-1px);
+}
+
+.footer-star {
+  margin-left: 0.25rem;
+
+  color: rgba(239, 229, 207, 0.38);
+
+  font-size: 0.7rem;
+}
+
+
+/* ==================================================
+    WORK + DRAWINGS - MOBILE
    ================================================== */
 
 @media (max-width: 700px) {
@@ -1808,7 +2088,7 @@ a {
   /* ---------- Drawings ---------- */
 
   .drawings {
-    padding: 2.6rem 1.5rem 3.6rem;
+    padding: 2.3rem 1.5rem 3.3rem;
   }
 
   .drawings-inner {
@@ -1843,13 +2123,23 @@ a {
     transform: none;
   }
 
-/* ---------- About ---------- */
+/* ---------- About - mobile ---------- */
 
 .about {
   padding:
-    7rem
+    6rem
     1.5rem
-    9rem;
+    8rem;
+}
+
+.about-inner {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: stretch;
+}
+
+.about-copy-block {
+  width: 100%;
 }
 
 .about h2 {
@@ -1863,15 +2153,116 @@ a {
 
 .about-thought {
   margin-bottom: 1.4rem;
-
   font-size: 0.78rem;
 }
 
 .about-location {
   margin-top: 1.8rem;
-
   font-size: 0.72rem;
-
   color: var(--ink);
+}
+
+.about-visual {
+  width: 100%;
+  margin-top: 0.1rem;
+
+  display: flex;
+  justify-content: center;
+}
+
+.berlin-tower-image {
+  width: min(68vw, 270px);
+  height: auto;
+}
+
+
+/* ---------- Contact ---------- */
+
+.contact {
+  padding:
+    2.2rem
+    1.5rem
+    0.2rem;
+}
+
+.contact-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.contact-copy {
+  order: 1;
+
+  width: 100%;
+}
+
+.contact h2 {
+  margin-bottom: 1.25rem;
+
+  font-size: 1.15rem;
+}
+
+.contact-title,
+.contact-text {
+  font-size: 0.78rem;
+}
+
+.contact-text {
+  margin-top: 1.4rem;
+}
+
+.contact-message {
+  margin-top: 1.8rem;
+
+  font-size: 0.66rem;
+}
+
+
+/* coffee */
+
+.coffee-visual {
+  order: 2;
+
+  width: 100%;
+
+  margin-top: 0.1rem;
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+.coffee-doily-image {
+  width: min(66vw, 252px);
+  height: auto;
+}
+
+
+/* steam */
+
+.coffee-steam {
+  left: 67%;
+  bottom: 62%;
+
+  width: 72px;
+  height: 118px;
+
+  transform: translateX(-50%);
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  min-height: 64px;
+
+  padding:
+    0
+    1.5rem;
+
+  font-size: 0.58rem;
+}
+
+.footer-links {
+  gap: 1rem;
 }
 }
