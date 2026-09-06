@@ -358,29 +358,129 @@ export default function Home() {
 
           <section id="about" className="about">
             <div className="about-inner">
-              <span className="section-number">05</span>
+              <div className="about-visual">
+                <Image
+                  src="/illustrations/berlin-tower.png"
+                  alt="Hand-drawn illustration of the Berlin Fernsehturm"
+                  width={900}
+                  height={900}
+                  className="berlin-tower-image"
+                />
+              </div>
 
-              <h2>about</h2>
+              <div className="about-copy-block">
+                <span className="section-number">05</span>
 
-              <div className="about-copy">
-                <p className="about-thought">
-                  figuring things out,
-                  <br />
-                  following ideas.
-                </p>
+                <h2>about</h2>
+                
+                <div className="about-copy">
+                  <p className="about-thought">
+                    figuring things out,
+                    <br />
+                    following ideas.
+                  </p>
 
-                <p className="about-thought">
-                  learning as I go,
-                  <br />
-                  making things along the way.
-                </p>
+                  <p className="about-thought">
+                    learning as I go,
+                    <br />
+                    making things along the way.
+                  </p>
 
-                <p className="about-location">
-                  based in Berlin.
-                </p>
+                  <p className="about-location">
+                    based in Berlin.
+                  </p>
+                </div>
               </div>
             </div>
           </section>
+
+          {/* ==================================================
+              CONTACT
+              ================================================== */}
+
+          <section id="contact" className="contact">
+            <div className="contact-inner">
+              <div className="contact-copy">
+                <span className="section-number">06</span>
+
+                <h2>contact</h2>
+
+                <p className="contact-title">
+                  let&apos;s connect.
+                </p>
+
+                <p className="contact-text">
+                  coffee,
+                  <br />
+                  strudel,
+                  <br />
+                  and good ideas.
+                </p>
+
+                <a
+                  href="mailto:dominkovicmarina@gmail.com"
+                  className="contact-message"
+                >
+                  send a message →
+                </a>
+              </div>
+              
+              <div className="coffee-visual">
+                <Image
+                  src="/illustrations/coffee-doily.png"
+                  alt="Hand-drawn coffee cup on a crochet doily"
+                  width={700}
+                  height={500}
+                  className="coffee-doily-image"
+                />
+
+                <svg
+                  className="coffee-steam"
+                  viewBox="0 0 140 180"
+                  aria-hidden="true"
+                >
+                  <path
+                    className="steam-line steam-line-1"
+                    d="M52 170 C28 145, 82 124, 50 97 C28 79, 66 58, 52 25"
+                  />
+
+                  <path
+                    className="steam-line steam-line-2"
+                    d="M79 168 C105 145, 62 124, 89 98 C110 78, 76 56, 92 18"
+                  />
+
+                  <path
+                    className="steam-line steam-line-3"
+                    d="M65 160 C48 139, 92 118, 68 92 C50 72, 79 50, 70 30"
+                  />
+                </svg>
+              </div>
+            </div>
+          </section>
+
+          <footer className="site-footer">
+            <span className="footer-mark">
+              © ink &amp; code
+            </span>
+
+            <div className="footer-links">
+              <a
+                href="https://github.com/rina-ink"
+                target="_blank"
+                rel="noreferrer"
+              >
+                github
+              </a>
+
+              <a href="mailto:dominkovicmarina@gmail.com">
+                email
+              </a>
+
+              <span className="footer-star" aria-hidden="true">
+                ✦
+              </span>
+            </div>
+          </footer>
         </div>
       </div>
     </main>
