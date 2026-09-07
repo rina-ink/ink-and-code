@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import StarTrail from "@/components/StarTrail";
+import WakingStar from "@/components/WakingStar";
 import CheckerTransition from "@/components/CheckerTransition";
 
 export default function Home() {
@@ -149,6 +150,8 @@ export default function Home() {
             <div className="planet planet-large" />
             <div className="planet planet-small" />
           </div>
+
+          <WakingStar />
 
           <StarTrail />
         </section>

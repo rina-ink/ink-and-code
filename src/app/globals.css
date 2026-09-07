@@ -895,6 +895,20 @@ a {
   }
 }
 
+.waking-star {
+  left: 56%;
+  top: 59%;
+}
+
+.waking-message {
+  left: 64px;
+  font-size: 0.58rem;
+}
+
+.waking-constellation {
+  width: 135px;
+}
+
 @media (max-width: 700px) {
   .checker-transition {
     height: 44px;
@@ -987,6 +1001,303 @@ a {
       scale(1.15);
 
     opacity: 0;
+  }
+}
+
+/* ==================================================
+    WAKING STAR
+   ================================================== */
+
+.waking-star {
+  position: absolute;
+
+  left: 61%;
+  top: 54%;
+
+  z-index: 11;
+
+  width: 44px;
+  height: 44px;
+
+  padding: 0;
+
+  border: 0;
+  background: transparent;
+
+  color: rgba(255, 248, 225, 0.88);
+
+  cursor: pointer;
+}
+
+.waking-star-symbol {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  font-family: Georgia, serif;
+  font-size: 0.55rem;
+
+  transition:
+    opacity 350ms ease,
+    transform 500ms ease;
+}
+
+
+/* ---------- hidden constellation ---------- */
+
+.waking-constellation {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 150px;
+  height: 90px;
+
+  pointer-events: none;
+}
+
+
+/* ---------- little connecting lines ---------- */
+
+.waking-line {
+  position: absolute;
+
+  height: 1px;
+
+  background: rgba(255, 248, 225, 0.42);
+
+  transform-origin: left center;
+
+  opacity: 0;
+}
+
+.waking-line-1 {
+  left: 5px;
+  top: 2px;
+
+  width: 42px;
+
+  transform:
+    rotate(-19deg)
+    scaleX(0);
+}
+
+.waking-line-2 {
+  left: 38px;
+  top: -11px;
+
+  width: 35px;
+
+  transform:
+    rotate(18deg)
+    scaleX(0);
+}
+
+
+/* ---------- constellation dots ---------- */
+
+.waking-dot {
+  position: absolute;
+
+  font-family: Georgia, serif;
+  font-size: 0.5rem;
+
+  opacity: 0;
+
+  transform: scale(0.3);
+}
+
+.waking-dot-1 {
+  left: 38px;
+  top: -22px;
+}
+
+.waking-dot-2 {
+  left: 69px;
+  top: -8px;
+}
+
+.waking-dot-3 {
+  left: 20px;
+  top: 22px;
+
+  font-size: 0.42rem;
+}
+
+
+/* ---------- hello world ---------- */
+
+.waking-message {
+  position: absolute;
+
+  left: 75px;
+  top: -19px;
+
+  white-space: nowrap;
+
+  color: rgba(255, 248, 225, 0.72);
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.62rem;
+
+  line-height: 1.35;
+  letter-spacing: 0.035em;
+
+  opacity: 0;
+
+  transform: translate3d(-6px, 3px, 0);
+
+  pointer-events: none;
+}
+
+
+/* ==================================================
+    WAKING STATE
+   ================================================== */
+
+.waking-star.is-awake .waking-star-symbol {
+  opacity: 1;
+
+  transform:
+    translate(-50%, -50%)
+    scale(1.3);
+}
+
+.waking-star.is-awake .waking-line-1 {
+  animation: waking-line-1 2.8s ease-out forwards;
+}
+
+.waking-star.is-awake .waking-line-2 {
+  animation: waking-line-2 2.8s ease-out forwards;
+}
+
+.waking-star.is-awake .waking-dot-1 {
+  animation: waking-dot 2.8s 160ms ease-out forwards;
+}
+
+.waking-star.is-awake .waking-dot-2 {
+  animation: waking-dot 2.8s 300ms ease-out forwards;
+}
+
+.waking-star.is-awake .waking-dot-3 {
+  animation: waking-dot 2.8s 430ms ease-out forwards;
+}
+
+.waking-star.is-awake .waking-message {
+  animation: waking-message 2.8s 420ms ease-out forwards;
+}
+
+
+/* ==================================================
+    WAKING ANIMATIONS
+   ================================================== */
+
+@keyframes waking-line-1 {
+  0% {
+    opacity: 0;
+    transform: rotate(-19deg) scaleX(0);
+  }
+
+  18% {
+    opacity: 0.45;
+  }
+
+  42% {
+    opacity: 0.42;
+    transform: rotate(-19deg) scaleX(1);
+  }
+
+  72% {
+    opacity: 0.34;
+  }
+
+  100% {
+    opacity: 0;
+    transform: rotate(-19deg) scaleX(1);
+  }
+}
+
+@keyframes waking-line-2 {
+  0% {
+    opacity: 0;
+    transform: rotate(18deg) scaleX(0);
+  }
+
+  22% {
+    opacity: 0.4;
+  }
+
+  46% {
+    opacity: 0.38;
+    transform: rotate(18deg) scaleX(1);
+  }
+
+  72% {
+    opacity: 0.3;
+  }
+
+  100% {
+    opacity: 0;
+    transform: rotate(18deg) scaleX(1);
+  }
+}
+
+@keyframes waking-dot {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+
+  22% {
+    opacity: 0;
+  }
+
+  42% {
+    opacity: 0.85;
+    transform: scale(1);
+  }
+
+  72% {
+    opacity: 0.65;
+  }
+
+  100% {
+    opacity: 0;
+    transform:
+      translate3d(3px, -3px, 0)
+      scale(1.05);
+  }
+}
+
+@keyframes waking-message {
+  0% {
+    opacity: 0;
+
+    transform: translate3d(-6px, 3px, 0);
+  }
+
+  24% {
+    opacity: 0;
+  }
+
+  43% {
+    opacity: 0.78;
+
+    transform: translate3d(0, 0, 0);
+  }
+
+  70% {
+    opacity: 0.72;
+  }
+
+  100% {
+    opacity: 0;
+
+    transform: translate3d(4px, -3px, 0);
   }
 }
 
@@ -1867,7 +2178,7 @@ a {
   .work {
     min-height: 100vh;
 
-    padding: 5rem 1.5rem 7rem;
+    padding: 5rem 1.5rem 6rem;
   }
 
   .work h2,
@@ -2016,7 +2327,7 @@ a {
 
   gap: 0;
 
-  margin-top: 8rem;
+  margin-top: 6.5rem;
 }
 
 .project-timbre .project-copy {
@@ -2088,7 +2399,7 @@ a {
   /* ---------- Drawings ---------- */
 
   .drawings {
-    padding: 2.3rem 1.5rem 3.3rem;
+    padding: 1.2rem 1.5rem 3.3rem;
   }
 
   .drawings-inner {
@@ -2164,7 +2475,7 @@ a {
 
 .about-visual {
   width: 100%;
-  margin-top: 0.1rem;
+  margin-top: -3.5rem;
 
   display: flex;
   justify-content: center;
@@ -2180,9 +2491,9 @@ a {
 
 .contact {
   padding:
-    2.2rem
+    1.3rem
     1.5rem
-    0.2rem;
+    1.2rem;
 }
 
 .contact-inner {
