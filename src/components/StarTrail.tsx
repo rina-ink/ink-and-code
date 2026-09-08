@@ -6,12 +6,14 @@ export default function StarTrail() {
     const trailRef = useRef<HTMLDivElement>(null);
     const lastStarTime = useRef(0);
 
-    const handlePointerMove = (
-        event: React.PointerEvent<HTMLDivElement>
+    const createStar = (
+        clientX: number,
+        clientY: number,
+        interval: number
     ) => {
         const now = performance.now();
-        
-        if (now - lastStarTime.current < 35) return;
+
+        if (now - lastStarTime.current < interval) return;
 
         lastStarTime.current = now;
 
@@ -21,8 +23,8 @@ export default function StarTrail() {
 
         const rect = trail.getBoundingClientRect();
 
-        const x = event.clientX - rect.left;
-        const y = event.clientY - rect.top;
+        const x = clientX - rect.left;
+        const y = clientY - rect.top;
 
         const star = document.createElement("span");
 
@@ -57,7 +59,19 @@ export default function StarTrail() {
             star.remove();
         }, 1800);
     };
-    
+
+    const handlePointerMove = (
+        event: React.PointerEvent<HTMLDivElement>
+    ) => {
+        const interval = event.pointerType === "touch" ? 18 : 35;
+
+        createStar(
+            event.clientX,
+            event.clientY,
+            interval
+        );
+    };
+
     return (
         <div
             ref={trailRef}
