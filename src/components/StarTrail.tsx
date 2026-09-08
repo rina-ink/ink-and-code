@@ -59,16 +59,36 @@ export default function StarTrail() {
             star.remove();
         }, 1800);
     };
-
+    
     const handlePointerMove = (
         event: React.PointerEvent<HTMLDivElement>
     ) => {
-        const interval = event.pointerType === "touch" ? 18 : 35;
+        if (event.pointerType === "touch") {
+            createStar(
+                event.clientX,
+                event.clientY,
+                18
+            );
+
+            createStar(
+                event.clientX + Math.random() * 18 - 9,
+                event.clientY + Math.random() * 18 - 9,
+                0
+            );
+
+            createStar(
+                event.clientX + Math.random() * 24 - 12,
+                event.clientY + Math.random() * 24 - 12,
+                0
+            );
+
+            return;
+        }
 
         createStar(
             event.clientX,
             event.clientY,
-            interval
+            35
         );
     };
 
