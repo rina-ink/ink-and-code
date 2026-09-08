@@ -9,7 +9,7 @@ const nothingYouCouldDo = Nothing_You_Could_Do({
 });
 
 export const metadata: Metadata = {
-  title: "Ink & Code",
+  title: "ink & code",
   description: "Software development, illustration, and things in between.",
 };
 
