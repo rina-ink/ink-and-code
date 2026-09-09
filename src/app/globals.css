@@ -945,6 +945,8 @@ a {
   overflow: hidden;
 
   cursor: crosshair;
+
+  touch-action: pan-y;
 }
 
 /*
