@@ -831,7 +831,7 @@ a {
 
   .falling-sugar {
     top: 64svh;
-    right: -2rem;
+    right: 0rem;
 
     width: 220px;
   }
@@ -2554,7 +2554,7 @@ a {
 /* steam */
 
 .coffee-steam {
-  left: 67%;
+  left: 67.2%;
   bottom: 62%;
 
   width: 72px;
