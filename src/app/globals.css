@@ -831,7 +831,7 @@ a {
 
   .falling-sugar {
     top: 64svh;
-    right: -2rem;
+    right: 0rem;
 
     width: 220px;
   }
