@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import StarTrail from "@/components/StarTrail";
+import WakingStar from "@/components/WakingStar";
+import CheckerTransition from "@/components/CheckerTransition";
 
 export default function Home() {
   return (
@@ -87,10 +89,21 @@ export default function Home() {
           <span className="falling-grain falling-grain-3">✦</span>
           <span className="falling-grain falling-grain-4">·</span>
 
-          <span className="falling-grain falling-grain-5 bridge-grain">·</span>
-          <span className="falling-grain falling-grain-6 bridge-grain">✧</span>
-          <span className="falling-grain falling-grain-7 bridge-grain">·</span>
-          <span className="falling-grain falling-grain-8 bridge-grain">·</span>
+          <span className="falling-grain falling-grain-5 bridge-grain">
+            ·
+          </span>
+
+          <span className="falling-grain falling-grain-6 bridge-grain">
+            ✧
+          </span>
+
+          <span className="falling-grain falling-grain-7 bridge-grain">
+            ·
+          </span>
+
+          <span className="falling-grain falling-grain-8 bridge-grain">
+            ·
+          </span>
         </div>
 
         {/* ==================================================
@@ -109,9 +122,7 @@ export default function Home() {
               and interactive things
             </p>
 
-            <span className="playground-hint">
-              follow the stars →
-            </span>
+            <span className="playground-hint">follow the stars →</span>
           </div>
 
           <div className="galaxy" aria-hidden="true">
@@ -140,8 +151,340 @@ export default function Home() {
             <div className="planet planet-small" />
           </div>
 
+          <WakingStar />
+
           <StarTrail />
         </section>
+
+        {/* ==================================================
+            CHECKER TRANSITION
+            ================================================== */}
+
+        <CheckerTransition />
+
+        {/* ==================================================
+            PAPER SECTIONS
+            work + drawings share one continuous paper surface
+            ================================================== */}
+
+        <div className="paper-sections">
+          {/* ==================================================
+              WORK
+              ================================================== */}
+
+          <section id="work" className="work">
+            <div className="work-intro">
+              <span className="section-number">03</span>
+
+              <h2>work</h2>
+
+              <p>
+                things I&apos;ve built,
+                <br />
+                and things I&apos;m still building.
+              </p>
+            </div>
+
+            {/* ==================================================
+                PROJECT 01 — INNER FLOW
+                ================================================== */}
+
+            <article className="project project-inner-flow">
+              <div className="project-visual">
+                <div className="inner-flow-mark" aria-hidden="true">
+                  <span className="flow-line flow-line-1" />
+                  <span className="flow-line flow-line-2" />
+                  <span className="flow-line flow-line-3" />
+                </div>
+              </div>
+
+              <div className="project-copy">
+                <span className="project-number">01 / selected work</span>
+
+                <h3>inner flow</h3>
+
+                <p className="project-description">
+                  a quiet space for
+                  <br />
+                  movement, rest and touch.
+                </p>
+
+                <p className="project-tech">
+                  React · TypeScript · Node
+                  <br />
+                  Express · MongoDB
+                </p>
+
+                <a
+                  href="https://inner-flow-frontend.onrender.com/"
+                  className="project-link"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  view project ↗
+                </a>
+              </div>
+            </article>
+
+            {/* ==================================================
+                PROJECT 02 — GUITAR STORE
+                ================================================== */}
+
+            <article className="project project-guitar-store">
+              <div className="project-copy">
+                <span className="project-number">02 / selected work</span>
+
+                <h3>guitar store api</h3>
+
+                <p className="project-description">
+                  a backend for products,
+                  <br />
+                  orders and inventory.
+                </p>
+
+                <p className="project-tech">
+                  Node · Express · TypeScript
+                  <br />
+                  MongoDB · Mongoose · Zod
+                </p>
+
+                <a
+                  href="https://github.com/rina-ink/guitar-store"
+                  className="project-link"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  view project ↗
+                </a>
+              </div>
+
+              <div className="project-visual project-visual-guitar">
+                <Image
+                  src="/illustrations/guitar-store-bass.png"
+                  alt="Hand-drawn bass guitar study"
+                  width={900}
+                  height={1200}
+                  className="guitar-store-image"
+                />
+              </div>
+            </article>
+
+            {/* ==================================================
+                PROJECT 03 — INSTRUMENT TIMBRE
+                ================================================== */}
+
+            <article className="project project-timbre">
+              <div className="project-visual project-visual-timbre">
+                <div className="timbre-mark" aria-hidden="true">
+                  <span className="music-note music-note-1">
+                    <span className="music-note-head" />
+                    <span className="music-note-stem" />
+                    <span className="music-note-flag" />
+                  </span>
+
+                  <span className="music-note music-note-2">
+                    <span className="music-note-head" />
+                    <span className="music-note-stem" />
+                    <span className="music-note-flag" />
+                  </span>
+
+                  <span className="music-note music-note-3">
+                    <span className="music-note-head" />
+                    <span className="music-note-stem" />
+                    <span className="music-note-flag" />
+                  </span>
+                </div>
+              </div>
+
+              <div className="project-copy">
+                <span className="project-number">03 / selected work</span>
+
+                <h3>instrument timbre</h3>
+
+                <p className="project-description">
+                  exploring how different
+                  <br />
+                  instruments sound.
+                </p>
+
+                <p className="project-tech">
+                  Python · audio analysis
+                  <br />
+                  data visualization · Streamlit
+                </p>
+
+                <a
+                  href="https://timbre.streamlit.app/"
+                  className="project-link"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  explore ↗
+                </a>
+              </div>
+            </article>
+          </section>
+
+          {/* ==================================================
+              DRAWINGS
+              ================================================== */}
+
+          <section id="drawings" className="drawings">
+            <div className="drawings-inner">
+              <div className="drawings-visual">
+                <Image
+                  src="/illustrations/strudel-drawing.jpg"
+                  alt="Hand-drawn illustrated story of squirrels making strudel"
+                  width={1536}
+                  height={2048}
+                  className="strudel-drawing"
+                />
+              </div>
+
+              <div className="drawings-copy">
+                <span className="section-number">04</span>
+
+                <h2>drawings</h2>
+
+                <p>
+                  things I make
+                  <br />
+                  away from the screen.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* ==================================================
+              ABOUT
+              ================================================== */}
+
+          <section id="about" className="about">
+            <div className="about-inner">
+              <div className="about-visual">
+                <Image
+                  src="/illustrations/berlin-tower.png"
+                  alt="Hand-drawn illustration of the Berlin Fernsehturm"
+                  width={900}
+                  height={900}
+                  className="berlin-tower-image"
+                />
+              </div>
+
+              <div className="about-copy-block">
+                <span className="section-number">05</span>
+
+                <h2>about</h2>
+                
+                <div className="about-copy">
+                  <p className="about-thought">
+                    figuring things out,
+                    <br />
+                    following ideas.
+                  </p>
+
+                  <p className="about-thought">
+                    learning as I go,
+                    <br />
+                    making things along the way.
+                  </p>
+
+                  <p className="about-location">
+                    based in Berlin.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* ==================================================
+              CONTACT
+              ================================================== */}
+
+          <section id="contact" className="contact">
+            <div className="contact-inner">
+              <div className="contact-copy">
+                <span className="section-number">06</span>
+
+                <h2>contact</h2>
+
+                <p className="contact-title">
+                  let&apos;s connect.
+                </p>
+
+                <p className="contact-text">
+                  coffee,
+                  <br />
+                  strudel,
+                  <br />
+                  and good ideas.
+                </p>
+
+                <a
+                  href="mailto:dominkovicmarina@gmail.com"
+                  className="contact-message"
+                >
+                  send a message →
+                </a>
+              </div>
+              
+              <div className="coffee-visual">
+                <Image
+                  src="/illustrations/coffee-doily.png"
+                  alt="Hand-drawn coffee cup on a crochet doily"
+                  width={700}
+                  height={500}
+                  className="coffee-doily-image"
+                />
+
+                <svg
+                  className="coffee-steam"
+                  viewBox="0 0 140 180"
+                  aria-hidden="true"
+                >
+                  <path
+                    className="steam-line steam-line-1"
+                    d="M52 170 C28 145, 82 124, 50 97 C28 79, 66 58, 52 25"
+                  />
+
+                  <path
+                    className="steam-line steam-line-2"
+                    d="M79 168 C105 145, 62 124, 89 98 C110 78, 76 56, 92 18"
+                  />
+
+                  <path
+                    className="steam-line steam-line-3"
+                    d="M65 160 C48 139, 92 118, 68 92 C50 72, 79 50, 70 30"
+                  />
+                </svg>
+              </div>
+            </div>
+          </section>
+
+          <footer className="site-footer">
+            <span className="footer-mark">
+              © ink &amp; code
+            </span>
+
+            <div className="footer-links">
+              <a
+                href="https://github.com/rina-ink"
+                target="_blank"
+                rel="noreferrer"
+              >
+                github
+              </a>
+
+              <a href="mailto:dominkovicmarina@gmail.com">
+                email
+              </a>
+
+              <span className="footer-star" aria-hidden="true">
+                ✦
+              </span>
+            </div>
+          </footer>
+        </div>
       </div>
     </main>
   );
