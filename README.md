@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+This is a Next.js project.
 
-## Getting Started
+#### Getting Started
 
 First, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+#### Deploy on Vercel
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Built with Next.js, TypeScript and Tailwind CSS.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+# ink & code
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+*software development · illustration · things in between*
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+A personal space for things I draw, things I build, and ideas that fall somewhere in between.
 
-## Deploy on Vercel
+**[explore the website ↗](https://rina-ink.vercel.app/)**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### The idea
+
+I wanted to create a portfolio that feels less like a collection of projects and more like a small world to explore.
+
+A place where illustration and code aren't separate disciplines, but different ways of thinking, experimenting, and communicating ideas.
+
+The website follows a loose visual narrative: a squirrel sprinkles sugar, the falling grains become stars, and a quiet little universe opens up. From there, the journey returns to paper, drawings, and the projects I've built.
+
+Some details are immediately visible. Others are there to be discovered.
+
+### Built with
+
+- **Next.js** — App Router
+- **React & TypeScript**
+- **Tailwind CSS** and custom CSS
+- **Original illustrations** and CSS animations
+- **Vercel** for deployment
+
+### A few details
+
+The website brings together a few things I enjoy exploring:
+
+- **Illustration as part of the interface** — hand-drawn elements help shape the atmosphere and tell a story.
+- **Interaction through discovery** — small responses to movement, touch, and curiosity, rather than conventional interface effects.
+- **Transitions between worlds** — warm paper textures, dark space, falling sugar, and stars connect different sections.
+- **Responsive design** — the composition and interactions adapt to different screen sizes, including touch devices.
+- **Quiet typography and space** — allowing the drawings, projects, and small details to speak for themselves.
+
+### Selected work
+
+**Inner Flow**  
+A massage therapy website exploring a calm digital experience, with React, TypeScript, and a Node.js backend.
+
+**Guitar Store API**  
+A backend project built with Express, TypeScript, and MongoDB, including authentication, product management, and order handling.
+
+**Instrument Timbre**  
+A data science project exploring the characteristics of musical instrument sounds through analysis and visualization.
+
+### Running locally
+
+```bash
+npm install
+npm run dev
+```
+
+
+### Still evolving
+
+Like most personal projects, this website isn't something I consider entirely finished.
+
+It's a place to keep experimenting with code, illustration, and the space between them — adding ideas, refining details, and learning along the way.
+
+---
+
+*drawn & built by [rina ink](https://rina-ink.vercel.app/)*
